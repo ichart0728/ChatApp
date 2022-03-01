@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx:
-    container_name: nginx
+    container_name: chat_nginx
     build:
       context: .docker/nginx
       dockerfile: Dockerfile
@@ -11,7 +11,7 @@ services:
       - web
 
   web:
-    container_name: web
+    container_name: chat_web
     build:
       context: .
       dockerfile: Dockerfile
