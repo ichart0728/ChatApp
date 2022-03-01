@@ -26,6 +26,10 @@ gem 'will_paginate', '3.1.7'
 
 gem 'will_paginate-bootstrap4'
 
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+gem 'semantic-ui-sass'
+gem 'jquery-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -56,6 +60,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'bootstrap', '~> 4.1.1'
-gem 'jquery-rails'
