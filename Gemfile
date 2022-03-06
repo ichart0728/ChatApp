@@ -26,10 +26,12 @@ gem 'will_paginate', '3.1.7'
 
 gem 'will_paginate-bootstrap4'
 
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.6.0'
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 gem 'semantic-ui-sass'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
