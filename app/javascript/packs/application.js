@@ -35,6 +35,7 @@ import "packs/application.css";
 //= require activestorage
 //= require_tree .
 
-$(function(){
+// turbolinks:load -> load jquery when at the time of page transition
+$(document).on('turbolinks:load', function(){
     $('.ui.dropdown').dropdown();
   })
