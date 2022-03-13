@@ -38,4 +38,8 @@ import "packs/application.css";
 // turbolinks:load -> load jquery when at the time of page transition
 $(document).on('turbolinks:load', function(){
     $('.ui.dropdown').dropdown();
-  })
+});
+
+$(document).on('click', '.message .close', function(){
+  $(this).closest('.message').transition('fade');
+});
