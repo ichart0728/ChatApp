@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
     # モデル同士の関係が1対1の場合 => 関連付けメソッド名.build
     message = current_user.messages.build(message_params)
     if message.save
-      redirect_to root_path
+      ActionCable.server.broadcast "chatroom_channel", foo: message.body
     end
   end
 
