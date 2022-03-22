@@ -35,11 +35,30 @@ import "packs/application.css";
 //= require activestorage
 //= require_tree .
 
+// 他のjsファイルでもこの関数を使えるようにexportする
+export default function scroll_bottom(){
+  if($('#messages').length > 0){
+    // scrollTop(引数: 画面の縦方向にどれくらい進むかを指定)
+    // -> $('#messages')の高さ分縦方向に進んだところ -> $('#messages')の一番下に移動する
+      $('#messages').scrollTop($('#messages')[0].scrollHeight);
+  }
+};
+
+function submit_message() {
+  $('#message_body').on('keydown', function(e) {
+    if(e.keyCode == 13) {
+      $('button').click();
+      e.target.value = "";
+    }
+  })
+}
+
 // turbolinks:load -> load jquery when at the time of page transition
 $(document).on('turbolinks:load', function(){
     $('.ui.dropdown').dropdown();
-});
-
-$(document).on('click', '.message .close', function(){
-  $(this).closest('.message').transition('fade');
-});
+    $('.message .close').on('click', function(){
+      $(this).closest('.message').transition('fade');
+    });
+    submit_message();
+    scroll_bottom();
+  });
